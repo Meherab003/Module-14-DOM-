@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Of DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .fruit-elements {
+            background-color: aqua;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,13 +18,52 @@
         <h1>Welcome to my DOM</h1>
     </header>
     <main>
-        <h1>My Awesome DOM</h1>
-        <ul>
-            <li>Jalili set</li>
-            <li>shafayet</li>
-            <li>bonobash</li>
-        </ul>
+        <section>
+            <h1>My Awesome DOM</h1>
+            <ul>
+                <li>Jalili set</li>
+                <li>shafayet</li>
+                <li>bonobash</li>
+            </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-name" class="some-class hello-class blue-bg">Fruits</h1>
+            <ul>
+                <li class="fruit-elements">Apple</li>
+                <li class="fruit-elements">Cherry</li>
+                <li class="fruit-elements">Banana</li>
+            </ul>
+        </section>
     </main>
+    <script src="js/dom.js"></script>
+    <script src="js/styeleInJS.js"></script>
+    <script>
+        const liCollections = document.getElementsByTagName('li');
+        // console.log(liCollections);
+        for (const li of liCollections) {
+            // console.log(li.innerText);
+        }
+
+        const headingCollections = document.getElementsByTagName('h1');
+        for (const h1 of headingCollections) {
+            // console.log(h1.innerText);
+        }
+        const fruitsName = document.getElementById('fruits-name');
+        fruitsName.innerText = 'Fruits, But changed by javascript';
+        // console.log(fruitsName.innerText);
+
+        const fruitElement = document.getElementsByClassName('fruit-elements');
+        for (const fruit of fruitElement) {
+            // console.log(fruit.innerText);
+        }
+
+        const someLi = document.querySelectorAll(".fruits-container li");
+        // console.log(someLi);
+        for (const fruits of someLi) {
+            // console.log(fruits.innerText);
+        }
+
+    </script>
 </body>
 
 </html>
