@@ -9,3 +9,9 @@ for (const section of sections) {
   section.style.backgroundColor = "lightblue";
   section.style.boxShadow = "0px 0px 10px solid black";
 }
+// const placesContainer = document.getElementById("places-container");
+// placesContainer.style.backgroundColor = "yellow";
+
+const placesContainer = document.getElementById("places-container");
+placesContainer.classList.add("yellow-bg");
+placesContainer.classList.remove("large-text");
